@@ -10,11 +10,13 @@ public:
     Matrix()
     {
         data = new T[rows*cols];
+        std::cout << "Конструктор отработал по адресу " << this << std::endl;
     }
 
     ~Matrix()
     {
         delete[] data;
+        std::cout << "Деструктор отработал по адресу " << this << std::endl;
     }
 
     void fill() //  заполнение матрицы вводом значений с клавиатуры
